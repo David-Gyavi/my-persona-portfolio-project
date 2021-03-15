@@ -68,6 +68,9 @@ In this portfolio you will be able to navigate with custom tuggle button through
 <a></a>
 
 ### **Site owners Goals**
+* To have an appealing website that it is easier to scroll on different different pages.
+* To make the web user friendly great functionality. 
+* To make the website to help the user to delete, update and sign in.
 
 [Back to Top](#table-of-contents)
 
@@ -78,6 +81,7 @@ In this portfolio you will be able to navigate with custom tuggle button through
 <a></a>
 
 #### Requirements
+* Easy way to sign In and Out
 
 <a></a>
 
