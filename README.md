@@ -81,7 +81,9 @@ In this portfolio you will be able to navigate with custom tuggle button through
 <a></a>
 
 #### Requirements
-* Easy way to sign In and Out
+* Easy way to sign In and Out.
+* Easy to navigate.
+* Appealing dashboard with a functional overview.
 
 <a></a>
 
