@@ -22,16 +22,22 @@
                         <li><a href="#">About</a></li>
                         <li><a href="#">My Work</a></li>
                         <li><a href="#">Contact</a></li>
+                        <li><a href="#">Log Out</a></li>
+                        <li><a href="#">Log In</a></li>
+                        <li><a href="#">Register</a></li>
                     </ul>
                 </div>
             </nav>
             
             <ul class="sidenav" id="mobile-demo">
                 <li><h4 class="center-align grey darken-4"></h4>Portfolio</li>
-                <li><a href="#">Home</a></li>
+                <li><a href="{{ url_for('get_fields') }}">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">My Work</a></li>
                 <li><a href="#">Contact</a></li>
+                <li><a href="#">Log Out</a></li>
+                <li><a href="#">Log In</a></li>
+                <li><a href="{{ url_for('get_register') }}">Register</a></li>
             </ul>
         </header>
 
