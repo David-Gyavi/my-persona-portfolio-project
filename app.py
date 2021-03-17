@@ -31,22 +31,24 @@ def get_fields():
 def register():
     if request.method == "POST":
         # Checking if username already exists in db
-        existing_user = mongo.db.users.find_one(
+        existing_users = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
 
-        if existing_user:
+        if existing_users:
             flash("Username already exists")     
-            return redirect(url_for("register.html")
+            return redirect(url_for("register.html"))
 
         register = {
             "username": request.form.get("username").lower(),
-            "password": generate_password_hash(request.form.get())
-        }    
+            "password": generate_password_hash(request.form.get("password"))
+        }     
+        mongo.db.users.insert_one(register)
 
-
-      
-
+        # put the new user into 'session' cookie  
+        session["user"] = request.form.get("username").lower()
+        flash("Registration Successfull!") 
+    return render_template("register.html")
 
 
 if __name__ == "__main__":
