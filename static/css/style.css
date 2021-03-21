@@ -1,10 +1,9 @@
 .text-shadow {
     text-shadow: (0,0,0,0.5);
 }
-<<<<<<< HEAD
 .flashes {
-=======
-.flashes h4 {
->>>>>>> bf7892db1cdcda37ddaaf58d35489fca3327feec
     line-height: 10px;
+}
+.slider {
+    margin-top: 25px;
 }
