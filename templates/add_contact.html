@@ -7,6 +7,18 @@
     <form class="col s12" method="=POST" action="">
         <div class="row">
             <div class="input-field col s12">
+             <i class="fas fa-folder-open prefix light-grey-text text-darken-4"></i>    
+                <select id="field_name" name="field_name" class="validate" required>
+                    <option value="" disabled selected>Choose Field</option>
+                    {% for field in fields %}
+                    <option value="{{ field.field_name }}">{{ field.field_name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="field_name">Task Field</label>
+            </div>
+        </div>
+       <div class="row">
+            <div class="input-field col s12">
                 <i class="fas fa-envelope-open-text prefix light-grey-text text-darken-4"></i>
                 <input id="icon_email" type="text" class="validate">
                 <label for="icon_email">Email</label>

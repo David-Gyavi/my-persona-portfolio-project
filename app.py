@@ -101,7 +101,8 @@ def logout():
 
 @app.route("/add_contact")
 def add_contact():
-    return render_template("add_contact.html")
+    fields = mongo.db.fields.find().sort("field_name", 1)
+    return render_template("add_contact.html", fields=fields)
 
 
 
