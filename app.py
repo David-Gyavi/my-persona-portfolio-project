@@ -79,17 +79,6 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<username>", methods=["GET", "POST"])
-def profile(username):
-    # grab the session user's username from db
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-        
-    if session["user"]:
-        return render_template("profile.html", username=username)
-
-    return redirect(url_for("login"))
-
 
 @app.route("/logout")
 def logout():
@@ -99,8 +88,22 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_contact")
+@app.route("/add_contact", methods=["GET", "POST"])
 def add_contact():
+    if request.method == "POST":
+        contact = {
+            "field_name": request.form.get("field_name"),
+            "email_name": request.form.get("email_name"),
+            "contact_name": request.form.get("contact_name"),
+            "due_date": request.form.get("due_date"),
+            "contact_description": request.form.get("contact_description"),
+            "created_by": session["user"]
+        }
+        mongo.db.fields.insert_one(contact)
+        flash("Field Successfully Added")
+        return redirect(url_for("get_fields"))
+
+
     fields = mongo.db.fields.find().sort("field_name", 1)
     return render_template("add_contact.html", fields=fields)
 
