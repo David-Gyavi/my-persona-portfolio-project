@@ -35,7 +35,7 @@ In this portfolio you will be able to navigate with custom tuggle button through
 * [Credits](#credits)
 
 <a name="ux"></a>
-
+ 
 ## **UX**
 
 <a></a>  
@@ -102,12 +102,12 @@ In this portfolio you will be able to navigate with custom tuggle button through
 I have decided to use some colors that fit well with the strong presentation of the portfolio.
 Below I will explain more why I choose the various colors and for what I will be using them.
 
-![Color Palette](wireframes/color_palette.png)
+![Color Palette](wireframes/color_pallet.png)
 
 * #F8F9FA: I have decided to keep the background of the overall website white-Cultured in order give the clean look of the Site.
 * #CED4DA: This color I will use as a background color for whole dashboard. 
 * #6C757D: This color I will use as a background color for the logs on the dashboard in order to have a small contract versus #D9D9D9 dashboard color.
-* #090A0B: This will be the color that I will use for my navigation bar and buttons in order to give a bit of color to the website. This color will also be used as the overall text color.
+* #212121: This color that I will use for my navigation bar and buttons in order to give a bit of color to the website. This color will also be used as the overall text color.
 
 I have used a contrast checker in order to make sure that the contrast is sufficient.
 This way my content will be easily readable. 

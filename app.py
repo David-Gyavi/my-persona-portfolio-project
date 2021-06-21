@@ -91,15 +91,13 @@ def logout():
 @app.route("/add_contact", methods=["GET", "POST"])
 def add_contact():
     if request.method == "POST":
-        contact = {
+        field = {
+            "category_name": request.form.get("catecategory_name"),
             "field_name": request.form.get("field_name"),
-            "email_name": request.form.get("email_name"),
-            "contact_name": request.form.get("contact_name"),
             "due_date": request.form.get("due_date"),
-            "contact_description": request.form.get("contact_description"),
-            "created_by": session["user"]
+            "field_description": request.form.get("field_description"),
         }
-        mongo.db.fields.insert_one(contact)
+        mongo.db.fields.insert_one(field)
         flash("Field Successfully Added")
         return redirect(url_for("get_fields"))
 

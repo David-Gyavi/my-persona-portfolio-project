@@ -31,3 +31,7 @@ main .indicators
     }
 }
 
+main .datepicker-date-display 
+{
+    background-color: #757575;
+}
