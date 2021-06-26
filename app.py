@@ -117,11 +117,6 @@ def add_contact():
     fields = mongo.db.fields.find().sort("field_name", 1)
     return render_template("add_contact.html", fields=fields)
 
-@app.route("/about", methods=["GET", "POST"])
-def about():
-    if request.method == "POST":
-    return redirect(url_for("about.html")
-
 
 
 if __name__ == '__main__':
