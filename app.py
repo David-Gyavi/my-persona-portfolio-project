@@ -87,7 +87,7 @@ def login():
 def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("profile.html", username)
+    return render_template("profile.html", username=username)
 
 
 
