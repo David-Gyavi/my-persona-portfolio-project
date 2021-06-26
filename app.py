@@ -48,7 +48,9 @@ def register():
         # put the new user into 'session' cookie  
         session["user"] = request.form.get("username").lower()
         flash("Registration Successfull!") 
+        return redirect(url_for("profile", username=["user"]))
     return render_template("register.html")
+
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -63,8 +65,10 @@ def login():
             # ensure hashed password matches user input
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
+                    session["user"] = request.form.get(
+                        "username").lower()
                     flash("Welcome, {}".format(request.form.get("username")))
+                    return redirect(url_for("profile", username=["user"]))
             else:
                 # invalid password match
                  flash("Incorrect Username and/or Password")
@@ -77,6 +81,13 @@ def login():
                 return redirect(url_for("login")) 
 
     return render_template("login.html")
+
+
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("profile.html", username)
 
 
 
@@ -93,22 +104,27 @@ def add_contact():
     if request.method == "POST":
         field = {
             "category_name": request.form.get("catecategory_name"),
-            "field_name": request.form.get("field_name"),
+            "skill_name": request.form.get("skill_name"),
+            "skill_description": request.form.get("skill_description"),
             "due_date": request.form.get("due_date"),
-            "field_description": request.form.get("field_description"),
+            "created_by": session["user"]
         }
-        mongo.db.fields.insert_one(field)
+        mongo.db.fields.insert_one(skill)
         flash("Field Successfully Added")
-        return redirect(url_for("get_fields"))
+        return redirect(url_for("get_skills"))
 
 
     fields = mongo.db.fields.find().sort("field_name", 1)
     return render_template("add_contact.html", fields=fields)
 
+@app.route("/about", methods=["GET", "POST"])
+def about():
+    if request.method == "POST":
+    return redirect(url_for("about.html")
 
 
 
-if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"),
-             port=int(os.environ.get("PORT")),
-             debug=True)    
+if __name__ == '__main__':
+    app.run(host=os.environ.get('IP'),
+            port=int(os.environ.get('PORT')),
+            debug=os.environ.get("DEBUG"))
