@@ -105,16 +105,18 @@ def logout():
 @app.route("/add_contact", methods=["GET", "POST"])
 def add_contact():
     if request.method == "POST":
+        is_urgent = "on" if request.form.get("is_urgent") else "off"
         field = {
-            "category_name": request.form.get("catecategory_name"),
-            "skill_name": request.form.get("skill_name"),
-            "skill_description": request.form.get("skill_description"),
-            "due_date": request.form.get("due_date"),
-            "created_by": session["user"]
+              "category_name": request.form.get("catecategory_name"),
+              "skill_name": request.form.get("skill_name"),
+              "skill_description": request.form.get("skill_description"),
+              "is_urgent": is_urgent,
+              "due_date": request.form.get("due_date"),
+              "created_by": session["user"]
         }
-        mongo.db.fields.insert_one(skill)
-        flash("Field Successfully Added")
-        return redirect(url_for("get_skills"))
+        mongo.db.skills.insert_one(field)
+        flash("Skills Successfully Added")
+        return redirect(url_for("get_field"))
 
 
     fields = mongo.db.fields.find().sort("field_name", 1)
