@@ -1,3 +1,7 @@
+
+![Mock up](wireframes/Screenshotee.png)
+
+
 ## **Goal for this project**
 
 This project is all about my Portfolio, so in general am talking about my self and the skills I can render to the user or Customer.
@@ -112,4 +116,15 @@ Below I will explain more why I choose the various colors and for what I will be
 I have used a contrast checker in order to make sure that the contrast is sufficient.
 This way my content will be easily readable. 
 
+<a></a>
+
+#### Structure
+
+I have chosen to use [Materialize](https://materializecss.com/) to create an overall structure for my website. 
+Materialize provides various elements of CSS and Javascript which is very helpful to keep a good structure on your page. 
+The reason why I choose Materiaize is mainly due to the various features they offer like a datepicker, floating action button etc. 
+
+[Back to Top](#table-of-contents)
+
+--- 
 <a></a>
