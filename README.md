@@ -100,7 +100,6 @@ In this portfolio you will be able to navigate with custom tuggle button through
 ### **Design Choices**
 
 <a></a>
-
 #### Colors
 
 I have decided to use some colors that fit well with the strong presentation of the portfolio.
@@ -128,3 +127,8 @@ The reason why I choose Materiaize is mainly due to the various features they of
 
 --- 
 <a></a>
+## Features 
+### LogIn Page
+- Allows you to log to see their private information
+- Has unauthenticated menu options
+![image](https://user-images.githubusercontent.com/58527807/133905731-221718a3-0efa-4bd7-b1b2-6ea1c079fff8.png)
