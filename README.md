@@ -132,3 +132,28 @@ The reason why I choose Materiaize is mainly due to the various features they of
 - Allows you to log to see their private information
 - Has unauthenticated menu options
 ![image](https://user-images.githubusercontent.com/58527807/133905731-221718a3-0efa-4bd7-b1b2-6ea1c079fff8.png)
+
+## Deployment
+### Local Deployment
+
+I have created the Portfolio project using Github, from there I used [Gitpod](https://gitpod.io/) to write my code. 
+Then I used commits to git followed by "git push" to my GitHub repository. 
+I've deployed this project to Heroku and used "git push heroku master" to make sure my pushes to GitHub were also made to Heroku. 
+
+This project can be ran locally by following the following steps: (
+I used Gitpod for development, so the following steps will be specific to Gitpod. 
+You will need to adjust them depending on your IDE. You can find more information about installing packages using pip and virtual environments [here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+To clone the project: 
+
+1. From the application's repository, click the "code" button and download the zip of the repository.
+    Alternatively, you can clone the repository using the following line in your terminal:
+
+    ``` 
+    git clone https://github.com/David-Gyavi/my-persona-portfolio-project.git
+    ``` 
+
+1. Access the folder in your terminal window and install the application's [required modules](https://github.com/David-Gyavi/my-persona-portfolio-project/blob/master/requirements.txt) using the following command:
+
+    ```
+    pip3 install -r requirements.txt
+    ```
