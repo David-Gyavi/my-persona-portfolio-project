@@ -132,9 +132,26 @@ The reason why I choose Materiaize is mainly due to the various features they of
 I just used only hand drawing for my wireframes to try bring out the ecxact work I wanted.
 You can as well find my wire frame below:
 For the homepage I have only created 1 wireframe as the design is quite basic and looks identical on all screen sizes.
-* [Home](wireframe/desktop-home.png)
+
+* [Home](wireframes/desktop-home.png)
+
 ### Desktop  Wireframes
-* [Form](wireframes/desktop login.png)
+
+* [Login](wireframes/desktop-login.png)
+* [Contact](wireframes/contact-form.png)
+
+### Mobile Wireframes
+
+* [Login](wireframes/login-form-mobile.png)
+* [Contact](wireframes/contact-form-mobile.png)
+
+
+### **Flowcharts**
+
+I have decided to make a flowchart for the sign-in / register proccess to completely understand each step of the process.  
+This flow chart, I have just used hand drawing which you can view below: 
+
+[Flowchart](wireframes/flowchart.png)
 
 ## Features 
 ### LogIn Page
