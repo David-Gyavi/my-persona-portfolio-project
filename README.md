@@ -132,14 +132,13 @@ The reason why I choose Materiaize is mainly due to the various features they of
 I just used only hand drawing for my wireframes to try bring out the ecxact work I wanted.
 You can as well find my wire frame below:
 For the homepage I have only created 1 wireframe as the design is quite basic and looks identical on all screen sizes.
-<<<<<<< HEAD
 
 * [Home](wireframes/desktop-home.png)
 
 ### Desktop  Wireframes
 
 * [Login](wireframes/desktop-login.png)
-* [Contact](wireframes/contact-form.png)
+* [Contact](wireframes/contact-form-desktop.png)
 
 ### Mobile Wireframes
 
