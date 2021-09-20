@@ -24,10 +24,9 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_fields') }}">Home</a></li>
                     {% if session.user %}
-                    <li><a href="#">About</a></li>
-                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a href="{{ url_for('add_contact') }}">Contacts</a></li>
-                    <li><a href="{{ url_for('contact') }}">Contacts</a></li>
+                    <li><a href="{{ url_for('add_contact') }}">Add Contacts</a></li>
+                    <li><a href="{{ url_for( 'profile', username=session['user']) }}">Profile</a></li>
+                    <li><a href="{{ url_for('edit_contact') }}">Contacts</a></li>
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                     {% else %}
                     <li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -42,11 +41,10 @@
                 <h4 class="center-align grey darken-4"></h4>Portfolio
             </li>
             <li><a href="{{ url_for('get_fields') }}">Home</a></li>
-            {% if session.user %}
-            <li><a href="#">About</a></li>
-            <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-
-            <li><a href="{{ url_for('add_contact') }}">Contact</a></li>
+            {% if session.user %}        
+            <li><a href="{{ url_for('add_contact') }}">Add Contact</a></li>
+            <li><a href="{{ url_for( 'profile', username=session['user']) }}">Profile</a></li>
+            <li><a href="{{ url_for('edit_contact') }}">Contacts</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
             <li><a href="{{ url_for('login') }}">Log In</a></li>

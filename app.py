@@ -83,17 +83,6 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<username>", methods=["GET", "POST"])
-def profile(username):
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-    if session["user"]:    
-        return render_template("profile.html", username=username)
-        
-    return redirect(url_for("login"))    
-
-
-
 @app.route("/logout")
 def logout():
     # remove user from session cookies
@@ -102,25 +91,59 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    if session["user"]:
+        return render_template("profile.html", username=username)
+    return redirect(url_for("login"))    
+
+
 @app.route("/add_contact", methods=["GET", "POST"])
 def add_contact():
     if request.method == "POST":
         is_urgent = "on" if request.form.get("is_urgent") else "off"
         field = {
-              "category_name": request.form.get("catecategory_name"),
-              "skill_name": request.form.get("skill_name"),
-              "skill_description": request.form.get("skill_description"),
-              "is_urgent": is_urgent,
-              "due_date": request.form.get("due_date"),
-              "created_by": session["user"]
-        }
-        mongo.db.skills.insert_one(field)
-        flash("Skills Successfully Added")
-        return redirect(url_for("get_field"))
+                       "contact_name": request.form.get("contact_name"),
+                       "field_name": request.form.get("field_name"),
+                       "email_name": request.form.get("email_name"),
+                       "contact_description": request.form.get(
+                           "contact_description"),
+                       "is_urgent": is_urgent,
+                       "due_date": request.form.get("due_date"),
+                       "created_by": session["user"]
+            }
+        mongo.db.contacts.insert_one(field)
+        flash("Contact Successfully Added")
 
 
     fields = mongo.db.fields.find().sort("field_name", 1)
     return render_template("add_contact.html", fields=fields)
+
+
+@app.route("/edit_contact", methods=["GET", "POST"])
+def edit_contact():
+    if request.method == "POST":
+        is_urgent = "on" if request.form.get("is_urgent") else "off"
+        field = {
+                       "contact_name": request.form.get("contact_name"),
+                       "field_name": request.form.get("field_name"),
+                       "email_name": request.form.get("email_name"),
+                       "contact_description": request.form.get(
+                           "contact_description"),
+                       "is_urgent": is_urgent,
+                       "due_date": request.form.get("due_date"),
+                       "created_by": session["user"]
+            }
+        mongo.db.contacts.insert_one(field)
+        flash("Contact Successfully Added")
+
+
+    fields = mongo.db.fields.find().sort("field_name", 1)
+    return render_template("edit_contact.html", fields=fields)    
+    
+
 
 
 
