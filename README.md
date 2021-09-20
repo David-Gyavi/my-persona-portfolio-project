@@ -134,7 +134,7 @@ You can as well find my wire frame below:
 For the homepage I have only created 1 wireframe as the design is quite basic and looks identical on all screen sizes.
 * ![Home](wireframe/desktop-home.png)
 ### Desktop  Wireframes
-* ![Form](wireframes/desktop login.png)
+* ![Form](wireframes/desktop-login.png)
 
 ## Features 
 ### LogIn Page
