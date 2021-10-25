@@ -116,7 +116,6 @@ def add_contact():
             "username":session["user"]
         })
         if request.method == "POST":
-            is_urgent = "on" if request.form.get("is_urgent") else "off"
             field = {
                         "contact_name": request.form.get("contact_name"),
                         "industry_name": request.form.get("industry_name"),
@@ -137,27 +136,37 @@ def add_contact():
     return redirect(url_for("login"))
 
 
-@app.route("/edit_contact", methods=["GET", "POST"])
-def edit_contact():
-    if request.method == "POST":
-        is_urgent = "on" if request.form.get("is_urgent") else "off"
-        field = {
-                       "contact_name": request.form.get("contact_name"),
-                       "field_name": request.form.get("field_name"),
-                       "email_name": request.form.get("email_name"),
-                       "contact_description": request.form.get(
-                           "contact_description"),
-                       "is_urgent": is_urgent,
-                       "due_date": request.form.get("due_date"),
-                       "created_by": session["user"]
-            }
-        mongo.db.contacts.insert_one(field)
-        flash("Contact Successfully Added")
-
-    fields = mongo.db.fields.find().sort("field_name", 1)
-    return render_template("edit_contact.html", fields=fields)     
-
-
+@app.route("/edit_contact/<string:id>", methods=["GET", "POST"])
+def edit_contact(id):
+    user = mongo.db.users.find_one(
+        {"username": session["user"]})
+    if session["user"]:
+        contact=mongo.db.contacts.find_one({
+            "created_by":user["_id"],
+            "_id":ObjectId(id)
+        })
+        if contact:
+            if request.method == "POST":
+                field = {
+                        "contact_name": request.form.get("contact_name"),
+                        "industry_name": request.form.get("industry_name"),
+                        "email_name": request.form.get("email_name"),
+                        "person_detail": request.form.get(
+                            "person_detail"),
+                        "is_helpful": request.form.get("is_helpful"),
+                            "updated_on": datetime.today().strftime('%Y-%m-%d'),
+                    }
+                mongo.db.contacts.edit(contact["_id"], field)
+                flash("Contacts Successfully Updated")
+                return redirect(url_for("contact_detail", id=contact._id))
+            else:
+                fields = mongo.db.fields.find().sort("field_name", 1)
+                return render_template("edit_contact.html", fields=fields, user=user, contact=contact)
+        flash("You have to own the contact in order to edit it!")
+        return redirect(url_for("my_contact"))
+    flash("You have to be loggedin in order to edit the contact")
+    return redirect(url_for("login"))    
+   
 
 @app.route("/my_contact")
 def my_contact():
