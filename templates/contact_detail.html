@@ -1,66 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
-
 <div class="container">
-    <h3 class="light-grey-text text-darken-4 center-align">CONTACT NAME</h3>
+    <h3 class="light-grey-text text-darken-4 center-align">CONTACT DETAIL</h3>
 <div class="row card-panel grey lighten-4">
-    <form class="col s12" method="POST" action="{{ url_for('add_contact') }}">
-        <!--due date picker-->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-calendar-alt prefix light-grey-text text-darken-4"></i>
-                <input id="due_date" name="due_date" type="text" class="datepicker validate" required>
-                <label for="due_date">Last Contact Date:</label>
-            </div>
-        </div>
-        <!--Industry field-->
-        <div class="row">
-            <div class="input-field col s12">
-             <i class="fas fa-folder-open prefix light-grey-text text-darken-4"></i>    
-                <select id="industry_name" name="industry_name" class="validate" required>
-                    <option value="" disabled selected>Industry:</option>
-                    {% for industry in industrys %}
-                    <option value="{{ industry.industry_name }}">{{ industry.industry_name }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-        </div>
-        <!--email name-->
-       <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-envelope-open-text prefix light-grey-text text-darken-4"></i>
-                <input id="email_name" name="email_name" type="text" class="validate">
-                <label for="icon_email">Email:</label>
-            </div>
-        </div>
-        <!--person_detail-->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-grey-text text-darken-4"></i>
-                <textarea id="person_detail" name="person_detail" class="materialize-textarea" minlength="5"
-                    maxlength="500" required></textarea>
-                <textarea for="person_detail">Personal Details</textarea>
-            </div>
-        </div>
-        <hr>
-        <!--submit button-->
-        <div class="row">
-            <div class="col s12 center-align">
-                <button type="submit" class="btn-large grey darken-3 text-shadow">
-                   Edit Contact<i class="fas fa-plus-square right"></i>
-                </button:>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 center-align">
-                <button type="submit" class="btn-large grey darken-3 text-shadow">
-                    Delete Contact<i class="fas fa-plus-square right"></i>
-                </button:>
-            </div>
-        </div>
-    </form>
-</div>
-</div>
 
+    <h5>
+        {% if contact.is_helpful %}
+        <i class="fas fa-star"></i>
+        {% endif %}
+        {{ contact.contact_name }}
+    </h5>
+    
+    <!--created on-->
+    <div class="row">
+        <p><strong> Created On: </strong>{{ contact.created_on }}</p>
+
+    </div>
+     <!--email-->
+     <div class="row">
+        <p><strong> Email: </strong>{{ contact.email_name }}</p>
+
+    </div>
+    <!--Industry field-->
+    <div class="row">
+        <p><strong> Industry: </strong>{{ contact.industry_name }}</p>
+
+    </div>
+     <!--person detail-->
+     <div class="row">
+        <p><strong> Details: </strong>{{ contact.person_detail }}</p>
+
+    </div>
+</div>
     
 {% endblock %}

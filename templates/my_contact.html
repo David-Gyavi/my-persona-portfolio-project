@@ -16,7 +16,13 @@
         {% for contact in contacts %}
             <div class="row card-panel grey lighten-4">
 
-                <h5>{{ contact.contact_name }}</h5>
+                <h5>
+                    {% if contact.is_helpful %}
+                    <i class="fas fa-star"></i>
+                    {% endif %}
+                    {{ contact.contact_name }}
+                </h5>
+                
                 <a href="{{ url_for('contact_detail', id=contact._id) }}">See Details</a>
                 <!--created on-->
                 <div class="row">
