@@ -2,80 +2,48 @@
 {% block content %}
 
 <div class="container">
-    <h3 class="light-grey-text text-darken-4 center-align">Add Contact</h3>
-<div class="row card-panel grey lighten-4">
-    <form class="col s12" method="=POST" action="{{ url_for('add_contact') }}">
-        <!--field selection-->
-        <div class="row">
-            <div class="input-field col s12">
-             <i class="fas fa-folder-open prefix light-grey-text text-darken-4"></i>    
-                <select id="field_name" name="field_name" class="validate" required>
-                    <option value="" disabled selected>Choose Field</option>
-                    {% for field in fields %}
-                    <option value="{{ field.field_name }}">{{ field.field_name }}</option>
-                    {% endfor %}
-                </select>
-                <label for="field_name">Task Field</label>
-            </div>
+    <h3 class="light-grey-text text-darken-4 center-align">Contacts</h3>
+    {% if contacts | length < 1 %} 
+        <div>
+            <p>
+                You don't have any contacts yet. But let's get started building your
+                contact list so you can start sharing your talent and get some work.
+            </p>
         </div>
-        <!--email name-->
-       <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-envelope-open-text prefix light-grey-text text-darken-4"></i>
-                <input id="email_name" name="email_name" type="text" class="validate">
-                <label for="icon_email">Email</label>
+        <a href="{{ url_for('add_contact') }}" class="btn">Add Contact</a>
+
+    {% else %}
+        {% for contact in contacts %}
+            <div class="row card-panel grey lighten-4">
+
+                <h5>{{ contact.contact_name }}</h5>
+                <a href="{{ url_for('contact_detail', id=contact._id) }}">See Details</a>
+                <!--created on-->
+                <div class="row">
+                    <p><strong> Created On: </strong>{{ contact.created_on }}</p>
+
+                </div>
+                <!--Industry field-->
+                <div class="row">
+                    <p><strong> Industry: </strong>{{ contact.industry_name }}</p>
+
+
+                </div>
             </div>
-        </div>
-        <!--contact name-->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-pencil-alt prefix light-grey-text text-darken-4"></i>
-                <input id="contact_name" name="contact_name" minlength="5" maxlength="50" type="text" class="validate"
-                    required>
-                <label for="contact_name">Contact Name</label>
-            </div>
-        </div>
-        <!--contact description-->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-grey-text text-darken-4"></i>
-                <textarea id="contact_description" name="contact_description" class="materialize-textarea" minlength="5"
-                    maxlength="500" required></textarea>
-                <label for="contact_description">Contact Description</label>
-            </div>
-        </div>
-        <!--due date picker-->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-calendar-alt prefix light-grey-text text-darken-4"></i>
-                <input id="due_date" name="due_date" type="text" class="datepicker validate" required>
-                <label for="due_date">Due Date</label>
-            </div>
-        </div>
-        <!-- is urgent toggle -->
-			<div class="row">
-				<div class="input-field col s12">
-					<div class="switch">
-                        <i class="fas fa-exclamation-circle prefix light-gray-text text-darken-4"></i>
-						<label for="is_urgent">
-                            <input type="checkbox" id="is_urgent" name="is_urgent">
-                            <span class="lever"></span>
-                            Is Urgent
-                        </label>
-					</div>
-				</div>
-			</div>
+
+        {% endfor %}
+
         <!--submit button-->
         <div class="row">
-            <div class="col s12 center-align">
+            <div class="col s12 left-align">
                 <button type="submit" class="btn-large grey darken-3 text-shadow">
-                    Add Field<i class="fas fa-plus-square right"></i>
-                </button:>
+                    Add Contact<i class="fas fa-plus-square right"></i>
+                    </button:>
             </div>
         </div>
-    </form>
-</div>
+    {% endif %}
+
 </div>
 
-    
+
 {% endblock %}
