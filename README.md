@@ -255,59 +255,33 @@ App.py Validation Results.
 
 
 ### Cross Browser and Cross Device Testing
-Create a table that lists out what devices, browsers, and operating system you tested your application on and a brief description of why you chose the mixture you did. The point is to prove that you looked at the site across various browsers, operating systems, and viewport breakpoints.
+I made sure my application looks good on different kind devices, different Operating systems and browsers!.
 
-| TOOL / Device                 | BROWSER     | OS         | SCREEN WIDTH  |
-|-------------------------------|-------------|------------|---------------|
-| real phone: motog6            | chrome      | android    | XS 360 x 640  |
-| browser stack: iPhone5s       | safari      | iOs        | XS 320 x 568  |
-| dev tools emulator: pixel 2   | firefox     | android    | SM 411 x 731  |
-| browserstack: iPhone 10x      | Chrome      | iOs        | SM 375 x 812  |
-| browserstack: nexus 7 - vert  | Chrome      | android    | M 600 x 960   |
-| real tablet: ipad mini - vert | safari      | iOs        | M 768 x 1024  |
-| browserstack: nexus 7 - horiz | firefox     | android    | LG 960 x 600  |
-| chrome emulator: ipad - horiz | safari      | iOs        | LG 1024 x 768 |
-| browserstack                  | Chrome      | windows    | XL 1920 x 946 |
-| real computer: mac book pro   | safari 12.1 | Mohave     | XL 1400 x 766 |
-| browserstack                  | IE Edge 88  | windows 10 | XL 1920 x 964 |
+
+| Device                | Browser  | OS             | SCREEN WIDTH |
+|-----------------------|----------|----------------|--------------|
+| iphone 7              | Chrome   | ios            | 375 x 667    |
+| ipad(Chrome emulator) | Chrome   | ios            | 768 x 1024   |
+| Laptop HP Elite       | Fire Fox | window 10 Pro  | 1920 x 1080  |
+| Laptop HP Elite       | Edge     | Windows 10 Pro | 1920 x 1080  |
 
 ### Automated Testing
-Whenever it is feasible, automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-If you did not run automating testing. State why you chose not to.
+I did not run automating testing. I didn't have time to learn the skill but I  really would like to do it in the future.
 
 ### Manual Testing
 
-You can track your test in various ways.  
+I excuted the following tests manually in chrome on my Laptop using the chrome browser.
 
-But for any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. 
-
-1. Markdown
->  A particularly useful form for describing your testing process is via scenarios, such as:
-> 
->  **Register Page**
->  Go to the Register page: http://<YOUR APPP>.herokuapp.com/register
+1. **Register Page**
+>  Go to the Register page: http://my-persona-portfolio-project.herokuapp.com/register
 >    - [x] Try to submit the empty form and verify that an error message about the required fields appears
 >    - [x] Try to submit the form with an invalid username format and verify that a relevant error message appears
 >    - [x] Try to submit the form with an invalid password format and verify that a relevant error message appears
 >    - [x] Try to submit the form with an existing username, should re-render page with relevant error message/warning
 >    - [x] Try to submit the form with all inputs valid and verify that a success message appears and user is on profile page
->    - [x] Be logged in and go to register page url http://<YOUR APPP>.herokuapp.com/register, should have error saying you are already registered and be on profile page
+>    - [x] Be logged in and go to register page https://8080-tomato-boar-koh8nrgg.ws-eu18.gitpod.io/register, should have error saying you are already registered and be on contacts page
 
-2. Spreadsheet    
-> Here is a [Manual Testing Template](https://docs.google.com/spreadsheets/d/189VpSeEG9oevSRhvb2WZl8zCk9L3s2iWQyrJ_1jjAGQ/edit?usp=sharing) that you can use as a starting point to keep track of your testing efforts. Make a copy of it in your own account and update as needed to reflect the browsers you are testing and features.  
 
-3. GitHub Issues, Milestones & Boards
-> You can also use agile tools in github to help track your testing and defects. Here's a document that I put together about that [process](https://docs.google.com/document/d/1nDS5tZeMO77Dfq85IZGMSV6C41XaPm9FwcpR3k-UTVc/edit?usp=sharing)
-
-It's ok to spot check specific functionality across devices and browsers but each page should be viewed as a whole for each device/browser combo at least once.
-
-A quick way to check if items are exceeding the screen width of a project is to run this javascript in the console for various screen emulations:
-
-```
-var docWidth = document.documentElement.offsetWidth;
-[].forEach.call(document.querySelectorAll('*'),function(el){if(el.offsetWidth > docWidth){console.log(el);}});
-```
 
 ### Defect Tracking
 
