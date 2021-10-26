@@ -20,7 +20,6 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-
 @app.route("/")
 @app.route("/get_fields")
 def get_fields():
@@ -46,7 +45,7 @@ def register():
         }     
         mongo.db.users.insert_one(register)
 
-        # put the new user into 'session' cookie  ///////////
+        # put the new user into 'session' cookie 
         session["user"] = request.form.get("username").lower()
         flash("Registration Successfull!") 
         return redirect(url_for("contact_detail", username=["user"]))
@@ -151,17 +150,18 @@ def edit_contact(id):
                         "contact_name": request.form.get("contact_name"),
                         "industry_name": request.form.get("industry_name"),
                         "email_name": request.form.get("email_name"),
-                        "person_detail": request.form.get(
-                            "person_detail"),
+                        "person_detail": request.form.get("person_detail"),
                         "is_helpful": request.form.get("is_helpful"),
-                            "updated_on": datetime.today().strftime('%Y-%m-%d'),
+                        "updated_on": datetime.today().strftime('%Y-%m-%d'),
+                        "created_on": contact['created_on'],
+                        "created_by": contact['created_by']
                     }
-                mongo.db.contacts.edit(contact["_id"], field)
+                mongo.db.contacts.update({"_id": ObjectId(contact["_id"])}, field)
                 flash("Contacts Successfully Updated")
-                return redirect(url_for("contact_detail", id=contact._id))
+                return redirect(url_for("contact_detail", id=contact['_id']))
             else:
                 fields = mongo.db.fields.find().sort("field_name", 1)
-                return render_template("edit_contact.html", fields=fields, user=user, contact=contact)
+                return render_template("edit_contact.html", industrys=fields, user=user, contact=contact)
         flash("You have to own the contact in order to edit it!")
         return redirect(url_for("my_contact"))
     flash("You have to be loggedin in order to edit the contact")
