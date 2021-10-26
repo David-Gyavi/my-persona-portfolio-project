@@ -201,9 +201,13 @@ This flow chart, I have just used hand drawing which you can view below:
 ## Testing
 
 ### Validation Testing
-You should try to ensure you code is valid and follows proper indentation.  In this section you should write up any websites you used to validate your code. As your projects becomes more complex these tools may change.
 
 - [CSS Validator](https://jigsaw.w3.org/css-validator/) Note, any error associated with root: color variables were ignored.
+- I coppied my style.css as direct input and fixed one issue to pass validation
+
+![image](https://user-images.githubusercontent.com/58527807/138954730-44aa019e-e4a4-4fcd-b082-0f966cd48abf.png)
+
+
 - [HTML Validator](https://validator.w3.org/)
 - [JS validation](https://jshint.com) for each .js file/ , if using ES6, add this before pasting in your file: `/*jshint esversion: 6 */ `
 - [JSON validation](https://jsonlint.com/) for each .json file 
