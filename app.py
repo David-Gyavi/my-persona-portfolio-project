@@ -1,6 +1,6 @@
 import os
 from flask import (
-    Flask, flash, render_template, 
+    Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -10,7 +10,7 @@ if os.path.exists("env.py"):
     import env
 
 
-app = Flask(__name__) 
+app = Flask(__name__)
 
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
@@ -34,23 +34,21 @@ def register():
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
-
         if existing_user:
-            flash("Username already exists")     
+            flash("Username already exists")
             return redirect(url_for("register"))
 
         register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
-        }     
+        }
         mongo.db.users.insert_one(register)
 
-        # put the new user into 'session' cookie 
+        # put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
-        flash("Registration Successfull!") 
+        flash("Registration Successfull!")
         return redirect(url_for("contact_detail", username=["user"]))
     return render_template("register.html")
-
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -60,25 +58,22 @@ def login():
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
-
         if existing_user:
             # ensure hashed password matches user input
-            if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get(
-                        "username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
-                    return redirect(url_for("my_contact"))
+            if check_password_hash(existing_user["password"], request.form.get("password")):  # noqa
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for("my_contact"))
             else:
                 # invalid password match
-                 flash("Incorrect Username and/or Password")
-                 return redirect(url_for("login")) 
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("login"))
 
         else:
 
                 # username doesn't exits
                 flash("Incorrect Username and/or Password")
-                return redirect(url_for("login")) 
+                return redirect(url_for("login"))
 
     return render_template("login.html")
 
@@ -96,34 +91,33 @@ def contact_detail(id):
     user = mongo.db.users.find_one(
         {"username": session["user"]})
     if session["user"]:
-        contact=mongo.db.contacts.find_one({
-            "created_by":user["_id"],
-            "_id":ObjectId(id)
+        contact = mongo.db.contacts.find_one({
+            "created_by": user["_id"],
+            "_id": ObjectId(id)
         })
         if contact:
             return render_template("contact_detail.html", contact=contact)
         flash("You have to own the contact in order to open it!")
         return redirect(url_for("my_contact"))
     flash("You have to be loggedin in order to see the contact")
-    return redirect(url_for("login"))    
+    return redirect(url_for("login"))
 
 
 @app.route("/add_contact", methods=["GET", "POST"])
 def add_contact():
     if session["user"]:
         user = mongo.db.users.find_one({
-            "username":session["user"]
+            "username": session["user"]
         })
         if request.method == "POST":
             field = {
                         "contact_name": request.form.get("contact_name"),
                         "industry_name": request.form.get("industry_name"),
                         "email_name": request.form.get("email_name"),
-                        "person_detail": request.form.get(
-                            "person_detail"),
+                        "person_detail": request.form.get("person_detail"),
                         "is_helpful": request.form.get("is_helpful"),
-                            "created_on": datetime.today().strftime('%Y-%m-%d'),
-                            "created_by": user["_id"]
+                        "created_on": datetime.today().strftime('%Y-%m-%d'),
+                        "created_by": user["_id"]
                 }
             mongo.db.contacts.insert_one(field)
             flash("Contact Successfully Added")
@@ -140,9 +134,9 @@ def edit_contact(id):
     user = mongo.db.users.find_one(
         {"username": session["user"]})
     if session["user"]:
-        contact=mongo.db.contacts.find_one({
-            "created_by":user["_id"],
-            "_id":ObjectId(id)
+        contact = mongo.db.contacts.find_one({
+            "created_by": user["_id"],
+            "_id": ObjectId(id)
         })
         if contact:
             if request.method == "POST":
@@ -156,34 +150,31 @@ def edit_contact(id):
                         "created_on": contact['created_on'],
                         "created_by": contact['created_by']
                     }
-                mongo.db.contacts.update({"_id": ObjectId(contact["_id"])}, field)
+                mongo.db.contacts.update({"_id": ObjectId(contact["_id"])},
+                                         field)
                 flash("Contacts Successfully Updated")
                 return redirect(url_for("contact_detail", id=contact['_id']))
             else:
                 fields = mongo.db.fields.find().sort("field_name", 1)
-                return render_template("edit_contact.html", industrys=fields, user=user, contact=contact)
+                return render_template("edit_contact.html", industrys=fields,
+                                       user=user, contact=contact)
         flash("You have to own the contact in order to edit it!")
         return redirect(url_for("my_contact"))
     flash("You have to be loggedin in order to edit the contact")
-    return redirect(url_for("login"))    
-   
+    return redirect(url_for("login"))
+
 
 @app.route("/my_contact")
 def my_contact():
     if session["user"]:
         user = mongo.db.users.find_one({
-            "username":session["user"]
+            "username": session["user"]
         })
-        contacts = mongo.db.contacts.find({
-        "created_by": user["_id"] 
-        })
-    
-
-   
-        return render_template("my_contact.html", user=user, contacts=list(contacts))
+        contacts = mongo.db.contacts.find({"created_by": user["_id"]})
+        return render_template("my_contact.html", user=user,
+                               contacts=list(contacts))
     flash("You must be loged in to access your contacts!")
     return redirect(url_for("login"))
-
 
 
 @app.route("/delete_contact/<string:id>")
@@ -191,26 +182,21 @@ def delete_contact(id):
     user = mongo.db.users.find_one(
         {"username": session["user"]})
     if session["user"]:
-        contact=mongo.db.contacts.find_one({
-            "created_by":user["_id"],
-            "_id":ObjectId(id)
+        contact = mongo.db.contacts.find_one({
+            "created_by": user["_id"],
+            "_id": ObjectId(id)
         })
         if contact:
             mongo.db.contacts.remove({"_id": ObjectId(id)})
             flash("You have successfully deleted the contact!")
-            return redirect(url_for("my_contact"))    
+            return redirect(url_for("my_contact"))
 
         flash("You have to own the contact in order to Delete it!")
         return redirect(url_for("my_contact"))
     flash("You have to be loggedin in order to delete the contact!")
-    return redirect(url_for("login"))    
-
-    
-
-
-
+    return redirect(url_for("login"))
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=False)   
+            debug=False)
