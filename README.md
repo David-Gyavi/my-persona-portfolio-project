@@ -240,23 +240,18 @@ Contact Detail Page validation. (Use Page source)
 ![image](https://user-images.githubusercontent.com/58527807/138963981-87c2b478-6e5e-4c36-9dda-dac7c424318e.png)
 
 
-
-
-
-
-
-
 - [JS validation](https://jshint.com) for each .js file/ , if using ES6, add this before pasting in your file: `/*jshint esversion: 6 */ `
-- [JSON validation](https://jsonlint.com/) for each .json file 
-- [PEP8 Validator](http://pep8online.com/) include a screenshot of results
 
-Note any errors or warnings you are ignoring and why. IT IS BEST NOT to have ERRORS, but NINJA, COLOR VARIABLES sometimes are ok to ignore if you say the IDE that has the correct linters noted no errors. Or you can take the rendered HTML and run it through the HTML validator for the Flask html templates.
+Script.Js Validation Results.
 
-If the line is too long just add 
-```$python 
-# noqa
-```
-There is a space before the # and after it to skip the quality assurance for that line.
+![image](https://user-images.githubusercontent.com/58527807/138965733-2e23a570-9c76-463f-b39d-9f60dcf41bbe.png)
+
+
+- [PEP8 Validator](http://pep8online.com/)
+
+App.py Validation Results.
+
+![image](https://user-images.githubusercontent.com/58527807/138968633-0c276963-64f3-4f61-818e-caee6a92357d.png)
 
 
 ### Cross Browser and Cross Device Testing
