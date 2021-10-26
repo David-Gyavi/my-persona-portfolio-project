@@ -1,7 +1,9 @@
 .text-shadow {
     text-shadow: (0,0,0,0.5);
 }
-
+.text-area{
+    white-space:pre-wrap;
+}
 .flashes 
 {
     line-height: 10px;
