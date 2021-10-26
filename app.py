@@ -29,6 +29,9 @@ def get_fields():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    if "user" in session:
+        flash("You must be logged out to register!")
+        return redirect(url_for("my_contact"))
     if request.method == "POST":
         # Checking if username already exists in db
         existing_user = mongo.db.users.find_one(
