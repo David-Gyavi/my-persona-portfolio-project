@@ -203,12 +203,49 @@ This flow chart, I have just used hand drawing which you can view below:
 ### Validation Testing
 
 - [CSS Validator](https://jigsaw.w3.org/css-validator/) Note, any error associated with root: color variables were ignored.
-- I coppied my style.css as direct input and fixed one issue to pass validation
+- I copied my style.css as direct input and fixed one issue to pass validation
 
 ![image](https://user-images.githubusercontent.com/58527807/138954730-44aa019e-e4a4-4fcd-b082-0f966cd48abf.png)
 
 
 - [HTML Validator](https://validator.w3.org/)
+
+Home page validation. (Use url)
+
+![image](https://user-images.githubusercontent.com/58527807/138957822-a52fdbd2-2974-4b78-b639-d6b0801becb6.png)
+
+logIn validation. (Use url)
+
+![image](https://user-images.githubusercontent.com/58527807/138958254-e4330d41-6975-4738-9954-acd62e43b2c6.png)
+
+Registration Validation. (Use url)
+
+![image](https://user-images.githubusercontent.com/58527807/138958414-f5f5472c-52d2-486c-b3f9-ed3fba7ddb6d.png)
+
+Contacts Page Validation{Page Source}
+
+![image](https://user-images.githubusercontent.com/58527807/138960138-435f7ad2-0786-4f1a-955c-823470c8dd79.png)
+
+Edit Contact Page validation. (Use Page source)
+
+![image](https://user-images.githubusercontent.com/58527807/138961906-f8b0e1ce-90d8-4a48-a5f9-da6d1cb0c53d.png)
+
+Add Contact Page validation. (Use Page source)
+
+![image](https://user-images.githubusercontent.com/58527807/138962667-aadabe2f-0fbe-48dd-bdda-2b1d41318eb5.png)
+
+
+Contact Detail Page validation. (Use Page source)
+
+![image](https://user-images.githubusercontent.com/58527807/138963981-87c2b478-6e5e-4c36-9dda-dac7c424318e.png)
+
+
+
+
+
+
+
+
 - [JS validation](https://jshint.com) for each .js file/ , if using ES6, add this before pasting in your file: `/*jshint esversion: 6 */ `
 - [JSON validation](https://jsonlint.com/) for each .json file 
 - [PEP8 Validator](http://pep8online.com/) include a screenshot of results
