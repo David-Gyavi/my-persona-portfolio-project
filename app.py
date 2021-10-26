@@ -183,6 +183,28 @@ def my_contact():
         return render_template("my_contact.html", user=user, contacts=list(contacts))
     flash("You must be loged in to access your contacts!")
     return redirect(url_for("login"))
+
+
+
+@app.route("/delete_contact/<string:id>")
+def delete_contact(id):
+    user = mongo.db.users.find_one(
+        {"username": session["user"]})
+    if session["user"]:
+        contact=mongo.db.contacts.find_one({
+            "created_by":user["_id"],
+            "_id":ObjectId(id)
+        })
+        if contact:
+            mongo.db.contacts.remove({"_id": ObjectId(id)})
+            flash("You have successfully deleted the contact!")
+            return redirect(url_for("my_contact"))    
+
+        flash("You have to own the contact in order to Delete it!")
+        return redirect(url_for("my_contact"))
+    flash("You have to be loggedin in order to delete the contact!")
+    return redirect(url_for("login"))    
+
     
 
 
