@@ -3,74 +3,74 @@
 
 <div class="container">
     <h3 class="light-grey-text text-darken-4 center-align">EDIT CONTACT</h3>
-<div class="row card-panel grey lighten-4">
-    <form class="col s12" method="POST" action="{{ url_for('edit_contact', id=contact._id) }}">
-        <!--contact name-->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-pencil-alt prefix light-grey-text text-darken-4"></i>
-                <input id="contact_name" name="contact_name" minlength="5" maxlength="50" type="text" value="{{ contact.contact_name }}" class="validate"
-                    required>
-                <label for="contact_name">Contact Name</label>
+    <div class="row card-panel grey lighten-4">
+        <form class="col s12" method="POST" action="{{ url_for('edit_contact', id=contact._id) }}">
+            <!--contact name-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-alt prefix light-grey-text text-darken-4"></i>
+                    <input id="contact_name" name="contact_name" minlength="5" maxlength="50" type="text" value="{{ contact.contact_name }}" class="validate"
+                        required>
+                    <label for="contact_name">Contact Name</label>
+                </div>
             </div>
-        </div>
-        <!--Industry field-->
-        <div class="row">
-            <div class="input-field col s12">
-             <i class="fas fa-folder-open prefix light-grey-text text-darken-4"></i>    
-                <select id="industry_name" name="industry_name" class="validate" required>
-                    <option value="" disabled selected>Industry:</option>
-                    {% for industry in industrys %}
-                    <option value="{{ industry.field_name }}" {% if industry.field_name == contact.industry_name %}selected{% endif %}>{{ industry.field_name }}</option>
-                    {% endfor %}
-                </select>
+            <!--Industry field-->
+            <div class="row">
+                <div class="input-field col s12">
+                <i class="fas fa-folder-open prefix light-grey-text text-darken-4"></i>    
+                    <select id="industry_name" name="industry_name" class="validate" required>
+                        <option value="" disabled selected>Industry:</option>
+                        {% for industry in industrys %}
+                        <option value="{{ industry.field_name }}" {% if industry.field_name == contact.industry_name %}selected{% endif %}>{{ industry.field_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
             </div>
-        </div>
-        <!--email name-->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-envelope-open-text prefix light-grey-text text-darken-4"></i>
-                <input id="email_name" name="email_name" type="email" class="validate" value="{{contact.email_name}}">
-                <label for="icon_email">Email:</label>
+            <!--email name-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-envelope-open-text prefix light-grey-text text-darken-4"></i>
+                    <input id="email_name" name="email_name" type="email" class="validate" value="{{contact.email_name}}">
+                    <label for="icon_email">Email:</label>
+                </div>
             </div>
-        </div>
-        <!--person_detail-->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-grey-text text-darken-4"></i>
-                <textarea id="person_detail" name="person_detail" class="materialize-textarea" minlength="5"
-                    maxlength="500" required>{{ contact.person_detail }}</textarea>
-                    <label for="person_detail">Person Detail</label>
+            <!--person_detail-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix light-grey-text text-darken-4"></i>
+                    <textarea id="person_detail" name="person_detail" class="materialize-textarea" minlength="5"
+                        maxlength="500" required>{{ contact.person_detail }}</textarea>
+                        <label for="person_detail">Person Detail</label>
+                </div>
             </div>
-        </div>
-        <!-- Is Helpful -->
-			<div class="row">
-				<div class="input-field col s12">
-					<div class="switch">
-                        <i class="fas fa-exclamation-circle prefix light-gray-text text-darken-4"></i>
-						<label for="is_helpful">
-                            <input type="checkbox" id="is_helpful" {% if contact.is_helpful %} checked {% endif %} name="is_helpful">
-                            <span class="lever"></span>
-                            Is Helpful
-                        </label>
-					</div>
-				</div>
-			</div>
-        <!--submit button-->
-        <div class="row">
-            <div class="col s6 right-align">
-                <button type="submit" class="btn-large grey darken-3 text-shadow">
-                   Save Contact<i class="fas fa-save right"></i>
-                </button:>
+            <!-- Is Helpful -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <div class="switch">
+                            <i class="fas fa-exclamation-circle prefix light-gray-text text-darken-4"></i>
+                            <label for="is_helpful">
+                                <input type="checkbox" id="is_helpful" {% if contact.is_helpful %} checked {% endif %} name="is_helpful">
+                                <span class="lever"></span>
+                                Is Helpful
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            <!--submit button-->
+            <div class="row">
+                <div class="col s6 right-align">
+                    <button type="submit" class="btn-large grey darken-3 text-shadow">
+                    Save Contact<i class="fas fa-save right"></i>
+                    </button>
+                </div>
+                <div class="col s6 left-align">
+                    <a class="btn-large grey darken-3 text-shadow">
+                        Cancel<i class="far fa-window-close right"></i>
+                    </a>
+                </div>
             </div>
-            <div class="col s6 left-align">
-                <button type="submit" class="btn-large grey darken-3 text-shadow">
-                    Cancel<i class="far fa-window-close right"></i>
-                </button>
-            </div>
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
 </div>
 
     
