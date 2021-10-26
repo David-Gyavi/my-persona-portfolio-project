@@ -19,7 +19,7 @@
                 <div class="input-field col s12">
                 <i class="fas fa-folder-open prefix light-grey-text text-darken-4"></i>    
                     <select id="industry_name" name="industry_name" class="validate" required>
-                        <option disabled>Industry:</option>
+                        <option value="" disabled>Industry:</option>
                         {% for industry in industrys %}
                         <option value="{{ industry.field_name }}" {% if industry.field_name == contact.industry_name %}selected{% endif %}>{{ industry.field_name }}</option>
                         {% endfor %}
