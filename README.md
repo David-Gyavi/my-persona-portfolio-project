@@ -1,12 +1,10 @@
 
-![Mock up](wireframes/Screenshotee.png)
+![image](https://user-images.githubusercontent.com/58527807/139157500-0de62f08-547f-49b5-aa3c-f7173d3cb7e2.png)
 
 
 ## **Goal for this project**
 
-This project is all about my Portfolio, so in general am talking about my self and the skills I can render to the user or Customer.
-
-In this portfolio you will be able to navigate with custom tuggle button through down the page and you will be able to scroll the page from the header to the footer.
+This project is all about managing business contacts for freelancers. It’s supposed to allow you to organize your contacts by Industry and flag if they are helpful or not. You can add personal data so when you reach out you the information at hand to know their family status, hobbies, etc to make the relationship more personal and help you make a lasting impression even if your memory isn’t that good.  Users register then can log in and add, edit and delete contacts.
 
 
 ## Table of Contents
