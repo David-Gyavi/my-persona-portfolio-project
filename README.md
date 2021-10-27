@@ -4,9 +4,7 @@
 
 ## **Goal for this project**
 
-This project is all about my Portfolio, so in general am talking about my self and the skills I can render to the user or Customer.
-
-In this portfolio you will be able to navigate with custom tuggle button through down the page and you will be able to scroll the page from the header to the footer.
+This project is all about managing business contacts for freelancers. It’s supposed to allow you to organize your contacts by Industry and flag if they are helpful or not. You can add personal data so when you reach out you the information at hand to know their family status, hobbies, etc to make the relationship more personal and help you make a lasting impression even if your memory isn’t that good.  Users register then can log in and add, edit and delete contacts.
 
 
 ## Table of Contents
@@ -60,10 +58,10 @@ In this portfolio you will be able to navigate with custom tuggle button through
 ### **User Stories**
 
 * As a user, I want to login after I created an account and see my previous inserted information.
-* As a user, I would like to have a personal profile for my portfolio.  
+* As a user, I would like to have a personal profile for my contact management.  
 * As a user, I would like to have a dashboard where I can have a good overview. 
 * As a user, I want to be able to search on date to get specific data. 
-* As a user, I want to be able to edit the portfolio profile.
+* As a user, I want to be able to edit the contact management profile.
 * As a user, I want to have the possibility to edit a log when I made a mistake or want to add/delete some info. 
 * As a user, I want to have the possibiltiy to delete a log as well when no longer relevant. 
 * As a user, I want the website to be easy to use. 
