@@ -281,7 +281,7 @@ I excuted the following tests manually in chrome on my Laptop using the chrome b
 >    - [x] Try to submit the form with all inputs valid and verify that a success message appears and user is on my contact page
 >    - [x] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/register should have error saying you are already registered and be on contacts page
 
-1. **Login Page**
+2. **Login Page**
 >  Go to the LogIn page: http://my-persona-portfolio-project.herokuapp.com/login
 >    - [x] Try to submit the empty form and verify that an error message about the required fields appears
 >    - [x] Try to submit the form with an invalid username format and verify that a relevant error message appears
@@ -289,6 +289,44 @@ I excuted the following tests manually in chrome on my Laptop using the chrome b
 >    - [x] Try to submit the form with an non existing username, should re-render page with relevant error message/warning
 >    - [x] Try to submit the form with all inputs valid and verify that a success message appears and user is on contact page
 >    - [x] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/login should have error saying you are already registered and be on contacts page
+
+ 3. **My Contact Page**
+>  Go to the Register page: http://my-persona-portfolio-project.herokuapp.com/my_contact
+>    - [x] Try to submit the empty form and verify that an error message about the required fields appears
+>    - [x] Try to submit the form with an invalid username format and verify that a relevant error message appears
+>    - [x] Try to submit the form with an invalid password format and verify that a relevant error message appears
+>    - [x] Try to submit the form with an existing username, should re-render page with relevant error message/warning
+>    - [x] Try to submit the form with all inputs valid and verify that a success message appears and user is on my contact page
+>    - [x] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/my_contact should have error saying you are already registered and be on contacts page
+
+4. **Add Contact**
+>  Go to the Register page: http://my-persona-portfolio-project.herokuapp.com/add_contact
+>    - [x] Try to submit the empty form and verify that an error message about the required fields appears
+>    - [x] Try to submit the form with an invalid username format and verify that a relevant error message appears
+>    - [x] Try to submit the form with an invalid password format and verify that a relevant error message appears
+>    - [x] Try to submit the form with an existing username, should re-render page with relevant error message/warning
+>    - [x] Try to submit the form with all inputs valid and verify that a success message appears and user is on my contact page
+>    - [x] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/add_contact should have error saying you are already registered and be on contacts page
+
+5. **Contact Detail Page**
+>  Go to the Register page: http://my-persona-portfolio-project.herokuapp.com/contact_detail
+>    - [x] Try to submit the empty form and verify that an error message about the required fields appears
+>    - [x] Try to submit the form with an invalid username format and verify that a relevant error message appears
+>    - [x] Try to submit the form with an invalid password format and verify that a relevant error message appears
+>    - [x] Try to submit the form with an existing username, should re-render page with relevant error message/warning
+>    - [x] Try to submit the form with all inputs valid and verify that a success message appears and user is on my contact page
+>    - [x] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/contact_detail should have error saying you are already registered and be on contacts page
+
+6. **Edit Contact & Delete Process**
+>  Go to the Register page: http://my-persona-portfolio-project.herokuapp.com/edit_contact
+>    - [x] Try to submit the empty form and verify that an error message about the required fields appears
+>    - [x] Try to submit the form with an invalid username format and verify that a relevant error message appears
+>    - [x] Try to submit the form with an invalid password format and verify that a relevant error message appears
+>    - [x] Try to submit the form with an existing username, should re-render page with relevant error message/warning
+>    - [x] Try to submit the form with all inputs valid and verify that a success message appears and user is on my contact page
+>    - [x] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/edit_contact should have error saying you are already registered and be on contacts page
+
+Delete Process
 
 ### Defect Tracking
 
