@@ -326,7 +326,37 @@ I excuted the following tests manually in chrome on my Laptop using the chrome b
 >    - [x] Try to submit the form with all inputs valid and verify that a success message appears and user is on my contact page
 >    - [x] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/edit_contact should have error saying you are already registered and be on contacts page
 
-Delete Process
+## Accessibility
+
+Home Page Validation Results. (Use Page source)
+
+![image](https://user-images.githubusercontent.com/58527807/139154986-2c59b1c7-6d3f-492c-91df-eca222d967e9.png)
+
+LogIn Validation Results. (Use Page source)
+
+![image](https://user-images.githubusercontent.com/58527807/139155247-f14fddde-5c2a-45ec-8c9e-63155c343fe4.png)
+
+Registration Validation Page Results.(Use Page source)
+
+![image](https://user-images.githubusercontent.com/58527807/139155435-41f55def-0dc5-4250-a601-41e4c5964c8e.png)
+
+Contacts Page validation Results. (Use Page source)
+
+![image](https://user-images.githubusercontent.com/58527807/139156113-7a6b33f5-2970-4979-9167-9037388a9169.png)
+
+Add Contact Page Validation Results. (Use Page source)
+
+![image](https://user-images.githubusercontent.com/58527807/139156537-0d5bad14-e28c-4f5b-851c-4a33101a7d0c.png)
+
+Edit Contact Page Validation Results. (Use Page source)
+
+![image](https://user-images.githubusercontent.com/58527807/139156751-446eedc5-538f-4b5c-9483-b867f712b653.png)
+
+Contact Detail Page Validation Results. (Use Page source)
+
+![image](https://user-images.githubusercontent.com/58527807/139157018-4f94c051-3431-4997-9073-7194acf4f840.png)
+
+
 
 ### Defect Tracking
 
@@ -335,10 +365,6 @@ You should mention  any  bugs or problems you discovered during your testing, ev
 Here is a [Defect Tracking Template](https://docs.google.com/spreadsheets/d/1tYB4X4wTCNEW_Y1no3hsGbclh2bLokl_I5Ev3s5EuJA/edit?usp=sharing) you use as a starting point to track defects. Make a copy of the sheet to your own account and update the Features sheet to match your project. 
 
 Again, you could use [github issues](https://docs.google.com/document/d/1nDS5tZeMO77Dfq85IZGMSV6C41XaPm9FwcpR3k-UTVc/edit?usp=sharing) to track you defects. Or write them up with markdown.
- 
-### Defects of Note
-Some defects are more pesky than others. Highlight 3-5 of the bugs that drove you the most nuts and how you finally ended up resolving them.
-
 
 ### Outstanding Defects
 It's ok to not resolve all the defects you found. If you know of something that isn't quite right, list it out and explain why you chose not to resolve it.
