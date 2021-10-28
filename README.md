@@ -319,9 +319,9 @@ Contacts are business contacts that users manage through this app
 
 - [HTML Validator](https://validator.w3.org/)
 
-Home page validation. (Use url)
+**Home page validation.** (Use url)
 
-![image](https://user-images.githubusercontent.com/58527807/138957822-a52fdbd2-2974-4b78-b639-d6b0801becb6.png)
+![image](https://user-images.githubusercontent.com/58527807/139340860-e6040dd7-f53f-4ef8-9dfe-a5da3589a1e4.png)
 
 logIn validation. (Use url)
 
@@ -401,7 +401,7 @@ I excuted the following tests manually in chrome on my Laptop using the chrome b
 
  3. **My Contact Page**
 >  Go to the Register page: http://my-persona-portfolio-project.herokuapp.com/my_contact
->    - [x] Try to submit the empty form and verify that an error message about the required fields appears
+>    - [ ] Try to submit the empty form and verify that an error message about the required fields appears
 >    - [x] Try to submit the form with an invalid username format and verify that a relevant error message appears
 >    - [x] Try to submit the form with an invalid password format and verify that a relevant error message appears
 >    - [x] Try to submit the form with an existing username, should re-render page with relevant error message/warning
@@ -415,7 +415,7 @@ I excuted the following tests manually in chrome on my Laptop using the chrome b
 >    - [x] Try to submit the form with an invalid password format and verify that a relevant error message appears
 >    - [x] Try to submit the form with an existing username, should re-render page with relevant error message/warning
 >    - [x] Try to submit the form with all inputs valid and verify that a success message appears and user is on my contact page
->    - [x] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/add_contact should have error saying you are already registered and be on contacts page
+>    - [x] Must Be logged in to get to the page, unlogged in users go to login page http://my-persona-portfolio-project.herokuapp.com/add_contact
 
 5. **Contact Detail Page**
 >  Go to the Register page: http://my-persona-portfolio-project.herokuapp.com/contact_detail
@@ -424,10 +424,18 @@ I excuted the following tests manually in chrome on my Laptop using the chrome b
 >    - [x] Try to submit the form with an invalid password format and verify that a relevant error message appears
 >    - [x] Try to submit the form with an existing username, should re-render page with relevant error message/warning
 >    - [x] Try to submit the form with all inputs valid and verify that a success message appears and user is on my contact page
->    - [x] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/contact_detail should have error saying you are already registered and be on contacts page
-
-6. **Edit Contact & Delete Process**
+>    - [x] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/contact_detail should have error saying, Only Users that own a contact can see the details
+6. **Edit Contact**
 >  Go to the Register page: http://my-persona-portfolio-project.herokuapp.com/edit_contact
+>    - [x]  Try to submit the empty form and verify that an error message about the required fields appears
+>    - [] Try to submit the form with an invalid username format and verify that a relevant error message appears
+>    - [] Try to submit the form with an invalid password format and verify that a relevant error message appears
+>    - [] Try to submit the form with an existing username, should re-render page with relevant error message/warning
+>    - [] Try to submit the form with all inputs valid and verify that a success message appears and user is on my contact page
+>    - [] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/edit_contact should have error saying you are already registered and be on contacts page
+
+ 7.**Delete Process**
+ Go to the Register page: http://my-persona-portfolio-project.herokuapp.com/edit_contact
 >    - [x] Try to submit the empty form and verify that an error message about the required fields appears
 >    - [x] Try to submit the form with an invalid username format and verify that a relevant error message appears
 >    - [x] Try to submit the form with an invalid password format and verify that a relevant error message appears
@@ -437,46 +445,46 @@ I excuted the following tests manually in chrome on my Laptop using the chrome b
 
 ## Accessibility
 
-Home Page Validation Results. (Use Page source)
+Home Page lighthouse audit link Results. (Use Page source)
 
 ![image](https://user-images.githubusercontent.com/58527807/139154986-2c59b1c7-6d3f-492c-91df-eca222d967e9.png)
 
-LogIn Validation Results. (Use Page source)
+LogIn lighthouse audit link Results. (Use Page source)
 
-![image](https://user-images.githubusercontent.com/58527807/139155247-f14fddde-5c2a-45ec-8c9e-63155c343fe4.png)
+![image](https://user-images.githubusercontent.com/58527807/139336680-552afc91-7e94-44d0-823b-5436cb5d277e.png)
 
-Registration Validation Page Results.(Use Page source)
+Registration lighthouse audit link Page Results.(Use Page source)
 
-![image](https://user-images.githubusercontent.com/58527807/139155435-41f55def-0dc5-4250-a601-41e4c5964c8e.png)
+![image](https://user-images.githubusercontent.com/58527807/139336805-1053a2dd-892b-4402-b928-f28da08c94a5.png)
 
-Contacts Page validation Results. (Use Page source)
+Contacts Page  lighthouse audit link Results. (Use Page source)
 
-![image](https://user-images.githubusercontent.com/58527807/139156113-7a6b33f5-2970-4979-9167-9037388a9169.png)
+![image](https://user-images.githubusercontent.com/58527807/139336989-a301a516-0846-4dbb-8e80-a00d333f77e3.png)
 
-Add Contact Page Validation Results. (Use Page source)
+Add Contact Page  lighthouse audit link Results. (Use Page source)
 
-![image](https://user-images.githubusercontent.com/58527807/139156537-0d5bad14-e28c-4f5b-851c-4a33101a7d0c.png)
+![image](https://user-images.githubusercontent.com/58527807/139337116-702a98f3-d1be-4e42-8a32-4f87ea376470.png)
 
-Edit Contact Page Validation Results. (Use Page source)
+Edit Contact Page  lighthouse audit link Results. (Use Page source)
 
-![image](https://user-images.githubusercontent.com/58527807/139156751-446eedc5-538f-4b5c-9483-b867f712b653.png)
+![image](https://user-images.githubusercontent.com/58527807/139337279-2828afe6-27fe-4ee5-b741-b9d122b9b518.png)
 
-Contact Detail Page Validation Results. (Use Page source)
+Contact Detail Page  lighthouse audit link Results. (Use Page source)
 
-![image](https://user-images.githubusercontent.com/58527807/139157018-4f94c051-3431-4997-9073-7194acf4f840.png)
+![image](https://user-images.githubusercontent.com/58527807/139337386-375a2361-f5b4-4b1f-999a-a919259e4ec5.png)
 
 
 
 ### Defect Tracking
+### BUGS
+I ran into quite a few issues when testing, here are some of the important ones I remember:
+- HTML validation failed - had a : in my button tag on contacts page that copied and pasted into my edit contact and add contact pages.
+- CSS validation failed - I had text-shadow defined wrong.
+- A no logged in user could add a contact - i fixed the route to check for user in session
 
-You should mention  any  bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 
-Here is a [Defect Tracking Template](https://docs.google.com/spreadsheets/d/1tYB4X4wTCNEW_Y1no3hsGbclh2bLokl_I5Ev3s5EuJA/edit?usp=sharing) you use as a starting point to track defects. Make a copy of the sheet to your own account and update the Features sheet to match your project. 
-
-Again, you could use [github issues](https://docs.google.com/document/d/1nDS5tZeMO77Dfq85IZGMSV6C41XaPm9FwcpR3k-UTVc/edit?usp=sharing) to track you defects. Or write them up with markdown.
-
-### Outstanding Defects
-It's ok to not resolve all the defects you found. If you know of something that isn't quite right, list it out and explain why you chose not to resolve it.
+#### Outstanding defects
+I have a weird overlap with the flash messsage in mobile navigation. 
 
 ## Deployment
 ### Local Deployment
