@@ -131,7 +131,7 @@ I just used only hand drawing for my wireframes to try bring out the ecxact work
 You can as well find my wire frame below:
 For the homepage I have only created 1 wireframe as the design is quite basic and looks identical on all screen sizes.
 
-* [Home](wireframes/desktop-home.png)
+* ![image](https://user-images.githubusercontent.com/58527807/139348567-abd81884-187b-432e-b083-4b2f610ddde9.png)
 
 ### Desktop  Wireframes
 
@@ -143,8 +143,8 @@ For the homepage I have only created 1 wireframe as the design is quite basic an
 
 ### Mobile Wireframes
 
-* [Login](wireframes/login-form-mobile.png)
-* [Contact](wireframes/contact-form-mobile.png)
+* ![login](https://user-images.githubusercontent.com/58527807/139349650-8cf3631d-7126-4aa0-9c1b-237b7391e00b.png)
+* [Contact]![image](https://user-images.githubusercontent.com/58527807/139351629-18af1a00-862c-4115-9031-aac4ccb2124c.png)
 
 
 ### **Flowcharts**
