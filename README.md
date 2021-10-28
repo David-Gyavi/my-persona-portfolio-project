@@ -5,6 +5,7 @@
 ## **Goal for this project**
 
 This project is all about managing business contacts for freelancers. It’s supposed to allow you to organize your contacts by Industry and flag if they are helpful or not. You can add personal data so when you reach out you the information at hand to know their family status, hobbies, etc to make the relationship more personal and help you make a lasting impression even if your memory isn’t that good.  Users register then can log in and add, edit and delete contacts.
+You can click to the link for the deployed site. (https://my-persona-portfolio-project.herokuapp.com/ )
 
 
 ## Table of Contents
@@ -147,9 +148,58 @@ For the homepage I have only created 1 wireframe as the design is quite basic an
 ### **Flowcharts**
 
 I have decided to make a flowchart for the sign-in / register proccess to completely understand each step of the process.  
-This flow chart, I have just used hand drawing which you can view below: 
 
-* [Flowchart](wireframes/flowchart.png)
+### Database Structure
+
+### Database
+I used mongodb to store the data in the contact manager app.
+
+#### Users
+Authentication and Contacts Management uses the USER Model.
+
+| Parameter | DataType | Validation                                                            |
+|-----------|----------|-----------------------------------------------------------------------|
+| _id       | ObjectId | auto generated as Primary Key                                         |
+| username  | String   | must be 5 characters or more, alphanumeric only, unique to system     |
+| password  | string   | stored as a hash, but must be 5 characters or more, alphanumeric only |
+
+- [x] Create is done in the Registration Process
+- [x] Read is done on all pages
+- [ ] Update must be done as ADMIN user in mongodb
+- [ ] Delete must be done as ADMIN user in mongodb
+
+### Fields
+Fields represent the Choices for business Categories that you assign to contacts
+
+| Parameter  | DataType | Validation                    |
+|------------|----------|-------------------------------|
+| _id        | ObjectId | auto generated as Primary Key |
+| field_name | String   | string                        |
+
+- [ ] Create must be done as ADMIN user in mongodb
+- [x] Read is done for create contact page and edit contact page
+- [ ] Update must be done as ADMIN user in mongodb
+- [ ] Delete must be done as ADMIN user in mongodb
+
+### Contacts
+Contacts are business contacts that users manage through this app
+
+| Parameter     | DataType | Validation                                                                                                                               |
+|---------------|----------|------------------------------------------------------------------------------------------------------------------------------------------|
+| _id           | ObjectId | auto generated as Primary Key                                                                                                            |
+| contact_name  | String   | string, must be between 5 and 50 characters                                                                                              |
+| industry_name | String   | restricted to FIELD.field_name values                                                                                                    |
+| email_name    | String   | must be a valid email address  1+ characters followed by @ sign followed by  1+ characters followed by . sign followed by  1+ characters |
+| person_detail | String   | must be between 5 and 500 characters                                                                                                     |
+| is_helpful    | Boolean  | default is False                                                                                                                         |
+| created_by    | ObjectId | Auto generated, relates to the user that created the contact                                                                             |
+| created_on    | String   | Auto created by datetime as today in YYYY-MM-DD format                                                                                   |
+| updated_on    | String   | auto created on edit as datetime of today in YYYY-MM-DD format                                                                           |
+
+- [x] Create is done on the Add Contact Page
+- [x] Read is done on My Contacts Page, Contact Detail Page, Edit Contact Page.
+- [x] Update is done by the Edit Contact Page
+- [x] Delete is done by a button on the My Contacts Page or a Button on the Contact Detail page. 
 
 
 
