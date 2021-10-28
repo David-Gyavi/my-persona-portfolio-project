@@ -204,12 +204,73 @@ Contacts are business contacts that users manage through this app
 
 
 ## Features 
+### Implemented Features
 ### LogIn Page
 - Allows you to log to see their private information
 - Has unauthenticated menu options
-![image](https://user-images.githubusercontent.com/58527807/133905731-221718a3-0efa-4bd7-b1b2-6ea1c079fff8.png)
+- 
+![image](https://user-images.githubusercontent.com/58527807/139317959-d977c4f8-284a-415b-855b-e4ec9a630abd.png)
 
 
+#### Register Page
+- Allows user to have an account on the site
+- User name must be unique
+
+![image](https://user-images.githubusercontent.com/58527807/139318206-93decbcd-8b15-41b6-8b62-6e829d28ff40.png)
+
+
+#### My Contacts Page
+- Shows user dashboard of contacts they have with just name, a star if helpful and business category, link to details,   edit button, delete button
+- has special message if no contacts yet
+- Has add button
+
+![image](https://user-images.githubusercontent.com/58527807/139319256-9664d047-f0c6-4f68-8529-def6f9eb2e66.png)
+
+
+#### Contact Detail Page
+- Shows user all information about contact
+- has edit and delete buttons
+- checks that user owns contact before allowing user to look
+
+![image](https://user-images.githubusercontent.com/58527807/139319535-c01e76c0-f652-485c-bfa8-e59b7f8e73e9.png)
+
+
+#### Add Contact Page
+- Allows user to add a contact
+- Has cancel button if user decides not to add a contact
+
+![image](https://user-images.githubusercontent.com/58527807/139320526-f615cade-01d8-403e-ae2c-39d59ef3adc6.png)
+
+
+#### Edit Contact Page
+- Allows user to edit a contact
+- Has a cancel button if user decides not to add a contact
+- checks that user is logged in and owns contact before allowing user to do things
+
+![image](https://user-images.githubusercontent.com/58527807/139320702-37a66f54-2868-482f-9694-00dc4d45b59a.png)
+
+
+#### Home Page
+- Has nice graphic carousel telling users why the contact management system is useful
+- has navigation to other pages
+
+![image](https://user-images.githubusercontent.com/58527807/139320974-7f30bced-57e8-4358-87e4-8849c4963ff6.png)
+
+
+#### Navigation
+- mobile is via hamburger menu
+- Desktop are links
+- Options changed if user is logged in or not
+
+### Future Features
+- add filtering on contact page by created/updated date, industry, is helpful
+- add search on contacts page by name or words in details
+- add updated date to contacts page and details page
+- add conversations that can be linked to contacts with date and details
+- add way to manage conversations
+- add link to conversations to detail and my contacts page
+- hook email to email app launcher
+- add ability to have users list them self as contacts that all users can search and import to their own contacts
 
 ## **Technologies used**
 
