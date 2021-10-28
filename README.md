@@ -445,9 +445,10 @@ I excuted the following tests manually in chrome on my Laptop using the chrome b
 
 ## Accessibility
 
-Home Page lighthouse audit link Results. (Use Page source)
+**Home Page** lighthouse audit link Results. (Use Page source)
 
-![image](https://user-images.githubusercontent.com/58527807/139154986-2c59b1c7-6d3f-492c-91df-eca222d967e9.png)
+![image](https://user-images.githubusercontent.com/58527807/139342016-d9266759-4332-44d4-beb3-3aa37ae45b23.png)
+
 
 LogIn lighthouse audit link Results. (Use Page source)
 
