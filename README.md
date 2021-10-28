@@ -22,7 +22,6 @@ You can click to the link for the deployed site. (https://my-persona-portfolio-p
         * [Structure](#structure)
 * [Wireframes:](#wireframes)
     * [Wireframes](#wireframes)
-    * [Flowcharts](#flowcharts)
     * [Database Structure](#database-structure)
 * [Features](#features)
     * [Existing Features](#existing-features)
@@ -136,8 +135,11 @@ For the homepage I have only created 1 wireframe as the design is quite basic an
 
 ### Desktop  Wireframes
 
-* [Login](wireframes/desktop-login.png)
-* [Contact](wireframes/contact-form-desktop.png)
+* [login](https://github.com/David-Gyavi/my-persona-portfolio-project/blob/master/wireframes/login.png)
+* [add_contact](https://github.com/David-Gyavi/my-persona-portfolio-project/blob/master/wireframes/add_contact.png)
+* [my_contacts](https://github.com/David-Gyavi/my-persona-portfolio-project/blob/master/wireframes/contact.png)
+* [contact_detail](https://github.com/David-Gyavi/my-persona-portfolio-project/blob/master/wireframes/contact_detail.png)
+* [edit_contact](https://github.com/David-Gyavi/my-persona-portfolio-project/blob/master/wireframes/edit_contact.png)
 
 ### Mobile Wireframes
 
@@ -397,7 +399,7 @@ I excuted the following tests manually in chrome on my Laptop using the chrome b
 >    - [x] Try to submit the form with an invalid password format and verify that a relevant error message appears
 >    - [x] Try to submit the form with an non existing username, should re-render page with relevant error message/warning
 >    - [x] Try to submit the form with all inputs valid and verify that a success message appears and user is on contact page
->    - [x] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/login should have error saying you are already registered and be on contacts page
+>    - [x] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/login should have error saying you are already loggedin and be on contacts page
 
  3. **My Contact Page**
 >  Go to the Register page: http://my-persona-portfolio-project.herokuapp.com/my_contact
@@ -425,6 +427,7 @@ I excuted the following tests manually in chrome on my Laptop using the chrome b
 >    - [x] Try to submit the form with an existing username, should re-render page with relevant error message/warning
 >    - [x] Try to submit the form with all inputs valid and verify that a success message appears and user is on my contact page
 >    - [x] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/contact_detail should have error saying, Only Users that own a contact can see the details
+>    
 6. **Edit Contact**
 >  Go to the Register page: http://my-persona-portfolio-project.herokuapp.com/edit_contact
 >    - [x]  Try to submit the empty form and verify that an error message about the required fields appears
