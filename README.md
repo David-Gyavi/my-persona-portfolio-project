@@ -401,13 +401,14 @@ I excuted the following tests manually in chrome on my Laptop using the chrome b
 >    - [x] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/login should have error saying you are already loggedin and be on contacts page
 
  3. **My Contact Page**
->  Go to the Register page: http://my-persona-portfolio-project.herokuapp.com/my_contact
->    - [ ] Try to submit the empty form and verify that an error message about the required fields appears
->    - [x] Try to submit the form with an invalid username format and verify that a relevant error message appears
->    - [x] Try to submit the form with an invalid password format and verify that a relevant error message appears
->    - [x] Try to submit the form with an existing username, should re-render page with relevant error message/warning
->    - [x] Try to submit the form with all inputs valid and verify that a success message appears and user is on my contact page
->    - [x] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/my_contact should have error saying you are already registered and be on contacts page
+>  Go to the Contact page: http://my-persona-portfolio-project.herokuapp.com/my_contact
+>    - [x] Register as new user and get to contact page, should be empty and have button only
+>    - [x] add contact with is helpful on, should see star next to name and Success message when routed back to contact page
+>    - [x] add contact with is helpful no, should NOT see star next to name and see success message
+>    - [x] created on date should show on my contact page
+>    - [x] Industry should show on my contact page
+>    - [x] if you delete a contact you should see messaging on this page
+>    - [x] Be logged out and go to contact page http://my-persona-portfolio-project.herokuapp.com/my_contact should have error saying you need to be logged in to get to contacts page
 
 4. **Add Contact**
 >  Go to the Register page: http://my-persona-portfolio-project.herokuapp.com/add_contact
