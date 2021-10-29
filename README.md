@@ -143,8 +143,8 @@ For the homepage I have only created 1 wireframe as the design is quite basic an
 
 ### Mobile Wireframes
 
-* ![login](https://user-images.githubusercontent.com/58527807/139349650-8cf3631d-7126-4aa0-9c1b-237b7391e00b.png)
-* [Contact]![image](https://user-images.githubusercontent.com/58527807/139351629-18af1a00-862c-4115-9031-aac4ccb2124c.png)
+* ![mobile_login](https://user-images.githubusercontent.com/58527807/139349650-8cf3631d-7126-4aa0-9c1b-237b7391e00b.png)
+* [mobile_contact]![image](https://user-images.githubusercontent.com/58527807/139351629-18af1a00-862c-4115-9031-aac4ccb2124c.png)
 
 
 ### **Flowcharts**
