@@ -144,7 +144,7 @@ For the homepage I have only created 1 wireframe as the design is quite basic an
 ### Mobile Wireframes
 
 * [mobile_login](https://github.com/David-Gyavi/my-persona-portfolio-project/blob/master/wireframes/mobile_login.png)
-* [mobile_contact]![image](https://github.com/David-Gyavi/my-persona-portfolio-project/blob/master/wireframes/mobile_contact.png)
+* [mobile_contact](https://github.com/David-Gyavi/my-persona-portfolio-project/blob/master/wireframes/mobile_contact.png)
 
 
 ### **Flowcharts**
