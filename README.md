@@ -411,7 +411,7 @@ I excuted the following tests manually in chrome on my Laptop using the chrome b
 >    - [x] Be logged out and go to contact page http://my-persona-portfolio-project.herokuapp.com/my_contact should have error saying you need to be logged in to get to contacts page
 
 4. **Add Contact**
->  Go to the Register page: http://my-persona-portfolio-project.herokuapp.com/add_contact
+>  Go to the Add Contact page: http://my-persona-portfolio-project.herokuapp.com/add_contact
 >    - [x] Try to submit the empty form and verify that an error message about the required fields appears
 >    - [x] Try to submit the form with an invalid username format and verify that a relevant error message appears
 >    - [x] Try to submit the form with an invalid password format and verify that a relevant error message appears
@@ -420,7 +420,7 @@ I excuted the following tests manually in chrome on my Laptop using the chrome b
 >    - [x] Must Be logged in to get to the page, unlogged in users go to login page http://my-persona-portfolio-project.herokuapp.com/add_contact
 
 5. **Contact Detail Page**
->  Go to the Register page: http://my-persona-portfolio-project.herokuapp.com/contact_detail
+>  Go to the Contact Detail page: http://my-persona-portfolio-project.herokuapp.com/contact_detail
 >    - [x] Try to submit the empty form and verify that an error message about the required fields appears
 >    - [x] Try to submit the form with an invalid username format and verify that a relevant error message appears
 >    - [x] Try to submit the form with an invalid password format and verify that a relevant error message appears
@@ -429,7 +429,7 @@ I excuted the following tests manually in chrome on my Laptop using the chrome b
 >    - [x] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/contact_detail should have error saying, Only Users that own a contact can see the details
 >    
 6. **Edit Contact**
->  Go to the Register page: http://my-persona-portfolio-project.herokuapp.com/edit_contact
+>  Go to the edit_contact page: http://my-persona-portfolio-project.herokuapp.com/edit_contact
 >    - [x]  Try to submit the empty form and verify that an error message about the required fields appears
 >    - [] Try to submit the form with an invalid username format and verify that a relevant error message appears
 >    - [] Try to submit the form with an invalid password format and verify that a relevant error message appears
@@ -438,8 +438,7 @@ I excuted the following tests manually in chrome on my Laptop using the chrome b
 >    - [] Be logged in and go to register page http://my-persona-portfolio-project.herokuapp.com/edit_contact should have error saying you are already registered and be on contacts page
 
  7.**Delete Process**
- Go to the Register page: http://my-persona-portfolio-project.herokuapp.com/edit_contact
->    - [x] Try to submit the empty form and verify that an error message about the required fields appears
+ Go to the Deleter page: http://my-persona-portfolio-project.herokuapp.com/edit_contact
 >    - [x] Try to submit the form with an invalid username format and verify that a relevant error message appears
 >    - [x] Try to submit the form with an invalid password format and verify that a relevant error message appears
 >    - [x] Try to submit the form with an existing username, should re-render page with relevant error message/warning
