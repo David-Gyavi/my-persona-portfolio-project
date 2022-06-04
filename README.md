@@ -5,7 +5,7 @@
 ## **Goal for this project**
 
 This project is all about managing business contacts for freelancers. It’s supposed to allow you to organize your contacts by Industry and flag if they are helpful or not. You can add personal data so when you reach out you the information at hand to know their family status, hobbies, etc to make the relationship more personal and help you make a lasting impression even if your memory isn’t that good.  Users register then can log in and add, edit and delete contacts.
-You can click to the link for the deployed site. (https://my-persona-portfolio-project.herokuapp.com/ )
+You can click to the link for the deployed site. (https://my-persona-portfolio-project.herokuapp.com)
 
 
 ## Table of Contents
