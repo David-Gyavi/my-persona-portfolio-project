@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
-app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.config["MONGO_URI"] = "mongodb+srv://daudi:dAUdi@myprojectdb.jh9w6.mongodb.net/personal_portfolio?retryWrites=true&w=majority"
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
@@ -201,5 +201,5 @@ def delete_contact(id):
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")),
+            port=os.environ.get("PORT"),
             debug=False)
