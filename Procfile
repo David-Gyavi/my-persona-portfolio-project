@@ -1,1 +1,1 @@
-web: python app.py
+web: gunicorn my-persona-portfolio-project.wsgi:application
